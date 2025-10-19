@@ -147,6 +147,8 @@ header .container {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    position: relative;
+    z-index: 999;
 }
 
 .logo img {
@@ -159,6 +161,11 @@ header .container {
     font-size: 1.5rem;
     margin-bottom: 0;
     color: var(--primary-color);
+}
+
+nav {
+    position: relative;
+    z-index: 1000;
 }
 
 nav ul {
@@ -192,6 +199,9 @@ nav a.active::after {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    padding: 5px;
 }
 
 .hamburger-menu span {
@@ -200,6 +210,19 @@ nav a.active::after {
     height: 3px;
     background-color: var(--dark-color);
     transition: var(--transition);
+    border-radius: 2px;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Hero Section */
@@ -706,17 +729,24 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header .container {
+        position: relative;
+    }
+    
     nav ul {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        right: 0;
+        width: 100vw;
+        margin-left: calc(-1.5rem);
         background-color: white;
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 0;
         gap: 0;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
     }
     
     nav ul.show {
@@ -725,11 +755,15 @@ footer {
     
     nav ul li {
         width: 100%;
+        border-bottom: 1px solid var(--gray-color);
     }
     
     nav ul a {
         display: block;
         padding: 1rem 1.5rem;
+        background-color: white;
+        width: 100%;
+        text-align: left;
     }
     
     nav ul a.active::after {
@@ -774,6 +808,14 @@ footer {
     .contact-info {
         order: -1;
     }
+    
+    .logo h1 {
+        font-size: 1.2rem !important;
+    }
+    
+    .logo img {
+        height: 45px !important;
+    }
 }
 
 @media (max-width: 576px) {
@@ -783,6 +825,14 @@ footer {
     
     h2 {
         font-size: 1.75rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.1rem !important;
+    }
+    
+    .logo img {
+        height: 40px !important;
     }
     
     .hero {
