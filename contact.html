@@ -49,41 +49,31 @@
             <div class="contact-grid">
                 <div class="contact-form">
                     <h2>Get in Touch</h2>
-                    <p>Fill out the form below, and we'll get back to you as soon as possible.</p>
+                    <p>We're here to help! Click the button below to send us a message on WhatsApp.</p>
                     
-                    <form id="contactForm" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                    <div class="whatsapp-section">
+                        <a href="https://wa.me/27648976019?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+                           class="whatsapp-button" 
+                           target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Text us on WhatsApp
+                        </a>
+                        <p class="whatsapp-info">Click the button above to chat with us instantly on WhatsApp</p>
+                    </div>
+
+                    <div class="alternative-contact">
+                        <h3>Or reach us directly:</h3>
+                        <div class="contact-methods">
+                            <div class="method">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:064897019">064 897 6019</a>
+                            </div>
+                            <div class="method">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@rooftooproofing.com">info@rooftooproofing.com</a>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service of Interest</label>
-                            <select id="service" name="service">
-                                <option value="green-roof">Roof with Grass</option>
-                                <option value="wendy-house">Wendy House</option>
-                                <option value="standard-roof">Standard Roofing</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Submit Message</button>
-                    </form>
+                    </div>
                 </div>
                 
                 <div class="contact-info">
@@ -174,6 +164,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27648976019?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+       class="floating-whatsapp" 
+       target="_blank"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="js/script.js"></script>
 </body>
